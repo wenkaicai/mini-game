@@ -9,10 +9,10 @@
 #include "physics_system.hpp"
 
 // Game configuration
-const size_t MAX_TURTLES = 1000;
-const size_t MAX_FISH = 500;
+const size_t MAX_TURTLES = 10000;
+const size_t MAX_FISH = 5000;
 // reduece frequency for turtle and fish
-const size_t TURTLE_DELAY_MS = 2000 * 0.7;
+const size_t TURTLE_DELAY_MS = 2000 * 1;
 const size_t FISH_DELAY_MS = 5000 * 1;
 
 // Create the fish world
@@ -152,9 +152,8 @@ bool WorldSystem::step(float elapsed_ms_since_last_update) {
 		}
 	}
 
-	ComponentContainer<Motion>& motion_container = registry.motions;
-	Entity enemy = registry.enemyAi.entities[0];
-	Motion& enemy_m = registry.motions.get(enemy);
+	Entity enemy_i = registry.enemyAi.entities[0];
+	Motion& enemy_m = registry.motions.get(enemy_i);
 
 	// Spawning new turtles
 	next_turtle_spawn -= elapsed_ms_since_last_update * current_speed;
@@ -170,10 +169,6 @@ bool WorldSystem::step(float elapsed_ms_since_last_update) {
 		// reduce speed by /2
 		motion.velocity = vec2(0.f, 200.f);
 	}
-
-	// to give fish random velocity
-	int rollX = rand() % 4 + 1;
-	int rollY = rand() % 4 - 2;
 
 	// Spawning new fish
 	next_fish_spawn -= elapsed_ms_since_last_update * current_speed;
@@ -331,38 +326,15 @@ bool WorldSystem::is_over() const {
 
 // On key callback
 void WorldSystem::on_key(int key, int, int action, int mod) {
-	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-	// TODO A1: HANDLE SALMON MOVEMENT HERE
-	// key is of 'type' GLFW_KEY_
-	// action can be GLFW_PRESS GLFW_RELEASE GLFW_REPEAT
-	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	
 	Entity player = registry.players.entities[0];
 	Motion& player_m = registry.motions.get(player);
 
+	// player jump
 	if (key == GLFW_KEY_SPACE) {
 		if (!player_m.isJumping && player_m.notJumping) {
 			player_m.isJumping = true;
 			player_m.notJumping = false;
-		}
-	}
-	// move up
-	if (key == GLFW_KEY_UP) {
-		if (action == GLFW_PRESS || action == GLFW_REPEAT) {
-			registry.motions.get(player_salmon).velocity.y = -300;
-		}
-		if (action == GLFW_RELEASE) {
-			registry.motions.get(player_salmon).velocity.y = 0;
-		}
-	}
-
-	// move down
-	if (key == GLFW_KEY_DOWN) {
-		if (action == GLFW_PRESS || action == GLFW_REPEAT) {
-			registry.motions.get(player_salmon).velocity.y = 300;
-		}
-		if (action == GLFW_RELEASE) {
-			registry.motions.get(player_salmon).velocity.y = 0;
 		}
 	}
 
@@ -415,10 +387,5 @@ void WorldSystem::on_key(int key, int, int action, int mod) {
 }
 
 void WorldSystem::on_mouse_move(vec2 mouse_position) {
-	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-	// TODO A1: HANDLE SALMON ROTATION HERE
-	// xpos and ypos are relative to the top-left of the window, the salmon's
-	// default facing direction is (1, 0)
-	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	(vec2)mouse_position; // dummy to avoid compiler warning
 }
