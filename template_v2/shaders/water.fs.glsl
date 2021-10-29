@@ -13,8 +13,6 @@ vec2 distort(vec2 uv)
 	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	// TODO A1: HANDLE THE WATER WAVE DISTORTION HERE (you may want to try sin/cos)
 	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-	uv.x += sin((uv.x + uv.y)*8 + time)*0.005;
-	uv.y += cos((uv.x - uv.y)*8 + time)*0.005;
 	return uv;
 }
 
@@ -23,7 +21,6 @@ vec4 color_shift(vec4 in_color)
 	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	// TODO A1: HANDLE THE COLOR SHIFTING HERE (you may want to make it blue-ish)
 	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-	in_color = in_color + vec4(0.0, 0.0, abs(sin(0.07*time)), 0.0);
 
 	return in_color;
 }
