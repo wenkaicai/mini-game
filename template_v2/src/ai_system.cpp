@@ -28,13 +28,13 @@ void AISystem::step(int height)
 		float dist;
 		dist = player_m.position.x - motion_i.position.x;
 		if (dist > 0) {
-			motion_i.velocity.x = 100;
+			motion_i.velocity.x = 200;
 		}
 		if (dist == 0) {
 			motion_i.velocity.x = 0;
 		}
 		if (dist < 0) {
-			motion_i.velocity.x = -100;
+			motion_i.velocity.x = -200;
 		}
 	}
 
@@ -53,27 +53,30 @@ void AISystem::step(int height)
 		if (!registry.block.has(entity_i)) {
 			continue;
 		}
-		float playerScaleX = player_m.scale.x / 2;
+		float playerScaleX = player_m.scale.x / -2;
 		float playerScaleY = player_m.scale.y / 2;
-		float blockScaleX = motion_i.scale.x / 2;
+		float blockScaleX = motion_i.scale.x / -2;
 		float blockScaleY = motion_i.scale.y / 2;
 		// collision when not jumping and sets the player jump to false
-			// when player is right to block
-			if (player_m.position.x + playerScaleX < motion_i.position.x - blockScaleX) {
-					if (motion_i.position.y - player_m.position.y < playerScaleY + blockScaleY) {
-						player_m.position.x = motion_i.position.x - blockScaleX - playerScaleX;
-
-				}
-			}
 			// when player is left to block
-			if (player_m.position.x - playerScaleX >= motion_i.position.x + blockScaleX){
-					if (motion_i.position.y - player_m.position.y < playerScaleY + blockScaleY) {
-						player_m.position.x = motion_i.position.x + blockScaleX + playerScaleX;
-					
+		if (player_m.position.x < motion_i.position.x) {
+			if (player_m.position.x + playerScaleX >= motion_i.position.x - blockScaleX) {
+				if (motion_i.position.y - player_m.position.y < playerScaleY + blockScaleY) {
+					player_m.position.x = motion_i.position.x - blockScaleX - playerScaleX;
+				}
 				}
 			}
+			// when player is right to block
+		if (player_m.position.x > motion_i.position.x) {
+			if (player_m.position.x - playerScaleX <= motion_i.position.x + blockScaleX){
+				if (motion_i.position.y - player_m.position.y < playerScaleY + blockScaleY) {
+					player_m.position.x = motion_i.position.x + blockScaleX + playerScaleX;
+				}
+				}
+			}
+
 		// when player is jumping
-		if (player_m.position.y + playerScaleY <= (motion_i.position.y - blockScaleY)) {
+		/*if (player_m.position.y + playerScaleY <= (motion_i.position.y - blockScaleY)) {
 			// in bound of block
 			if ((player_m.position.x + playerScaleX) >= motion_i.position.x - blockScaleX) {
 				if (player_m.position.x - playerScaleX <= motion_i.position.x + blockScaleX) {
@@ -118,6 +121,21 @@ void AISystem::step(int height)
 					player_m.notJumping = true;
 				}
 			}
+		}*/
+
+		if (player_m.isJumping) {
+			player_m.position.y -= player_m.gravity;
+		}
+		else {
+			player_m.position.y += player_m.gravity;
+		}
+		// jump limit
+		if (player_m.position.y >= 700) {
+			player_m.position.y = 700;
+			player_m.notJumping = true;
+		}
+		if (player_m.position.y <= 500) {
+			player_m.isJumping = false;
 		}
 	}
 }

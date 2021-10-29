@@ -9,11 +9,11 @@
 #include "physics_system.hpp"
 
 // Game configuration
-const size_t MAX_TURTLES = 15;
-const size_t MAX_FISH = 5;
+const size_t MAX_TURTLES = 1000;
+const size_t MAX_FISH = 500;
 // reduece frequency for turtle and fish
-const size_t TURTLE_DELAY_MS = 2000 * 6;
-const size_t FISH_DELAY_MS = 5000 * 2;
+const size_t TURTLE_DELAY_MS = 2000 * 0.7;
+const size_t FISH_DELAY_MS = 5000 * 1;
 
 // Create the fish world
 WorldSystem::WorldSystem()
