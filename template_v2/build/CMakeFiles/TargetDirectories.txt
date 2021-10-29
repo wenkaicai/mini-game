@@ -1,0 +1,3 @@
+//mac/Home/Desktop/CPSC427/template_v2/build/CMakeFiles/salmon.dir
+//mac/Home/Desktop/CPSC427/template_v2/build/CMakeFiles/ALL_BUILD.dir
+//mac/Home/Desktop/CPSC427/template_v2/build/CMakeFiles/ZERO_CHECK.dir

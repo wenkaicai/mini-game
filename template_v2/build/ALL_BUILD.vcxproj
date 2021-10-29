@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E0E3DAC1-A8F0-31E9-A830-BF10D21EBD67}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="\\mac\Home\Desktop\CPSC427\template_v2\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule //mac/Home/Desktop/CPSC427/template_v2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\bin\cmake.exe -S//mac/Home/Desktop/CPSC427/template_v2 -B//mac/Home/Desktop/CPSC427/template_v2/build --check-stamp-file //mac/Home/Desktop/CPSC427/template_v2/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeCInformation.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeCXXInformation.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeGenericSystem.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeInitializeConfigs.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeRCInformation.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeSystemSpecificInformation.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeSystemSpecificInitialize.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\Compiler\MSVC-CXX.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\FindOpenGL.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\FindPackageHandleStandardArgs.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\FindPackageMessage.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\Platform\Windows-MSVC-CXX.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\Platform\Windows.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\Platform\WindowsPaths.cmake;\\mac\Home\Desktop\CPSC427\template_v2\build\CMakeFiles\3.21.3\CMakeCCompiler.cmake;\\mac\Home\Desktop\CPSC427\template_v2\build\CMakeFiles\3.21.3\CMakeCXXCompiler.cmake;\\mac\Home\Desktop\CPSC427\template_v2\build\CMakeFiles\3.21.3\CMakeRCCompiler.cmake;\\mac\Home\Desktop\CPSC427\template_v2\build\CMakeFiles\3.21.3\CMakeSystem.cmake;\\mac\Home\Desktop\CPSC427\template_v2\ext\glm\cmake\glm\glmConfig-version.cmake;\\mac\Home\Desktop\CPSC427\template_v2\ext\glm\cmake\glm\glmConfig.cmake;\\mac\Home\Desktop\CPSC427\template_v2\ext\project_path.hpp.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">\\mac\Home\Desktop\CPSC427\template_v2\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule //mac/Home/Desktop/CPSC427/template_v2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\bin\cmake.exe -S//mac/Home/Desktop/CPSC427/template_v2 -B//mac/Home/Desktop/CPSC427/template_v2/build --check-stamp-file //mac/Home/Desktop/CPSC427/template_v2/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeCInformation.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeCXXInformation.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeGenericSystem.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeInitializeConfigs.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeRCInformation.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeSystemSpecificInformation.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeSystemSpecificInitialize.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\Compiler\MSVC-CXX.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\FindOpenGL.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\FindPackageHandleStandardArgs.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\FindPackageMessage.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\Platform\Windows-MSVC-CXX.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\Platform\Windows.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\Platform\WindowsPaths.cmake;\\mac\Home\Desktop\CPSC427\template_v2\build\CMakeFiles\3.21.3\CMakeCCompiler.cmake;\\mac\Home\Desktop\CPSC427\template_v2\build\CMakeFiles\3.21.3\CMakeCXXCompiler.cmake;\\mac\Home\Desktop\CPSC427\template_v2\build\CMakeFiles\3.21.3\CMakeRCCompiler.cmake;\\mac\Home\Desktop\CPSC427\template_v2\build\CMakeFiles\3.21.3\CMakeSystem.cmake;\\mac\Home\Desktop\CPSC427\template_v2\ext\glm\cmake\glm\glmConfig-version.cmake;\\mac\Home\Desktop\CPSC427\template_v2\ext\glm\cmake\glm\glmConfig.cmake;\\mac\Home\Desktop\CPSC427\template_v2\ext\project_path.hpp.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">\\mac\Home\Desktop\CPSC427\template_v2\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule //mac/Home/Desktop/CPSC427/template_v2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\bin\cmake.exe -S//mac/Home/Desktop/CPSC427/template_v2 -B//mac/Home/Desktop/CPSC427/template_v2/build --check-stamp-file //mac/Home/Desktop/CPSC427/template_v2/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeCInformation.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeCXXInformation.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeGenericSystem.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeInitializeConfigs.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeRCInformation.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeSystemSpecificInformation.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeSystemSpecificInitialize.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\Compiler\MSVC-CXX.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\FindOpenGL.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\FindPackageHandleStandardArgs.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\FindPackageMessage.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\Platform\Windows-MSVC-CXX.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\Platform\Windows.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\Platform\WindowsPaths.cmake;\\mac\Home\Desktop\CPSC427\template_v2\build\CMakeFiles\3.21.3\CMakeCCompiler.cmake;\\mac\Home\Desktop\CPSC427\template_v2\build\CMakeFiles\3.21.3\CMakeCXXCompiler.cmake;\\mac\Home\Desktop\CPSC427\template_v2\build\CMakeFiles\3.21.3\CMakeRCCompiler.cmake;\\mac\Home\Desktop\CPSC427\template_v2\build\CMakeFiles\3.21.3\CMakeSystem.cmake;\\mac\Home\Desktop\CPSC427\template_v2\ext\glm\cmake\glm\glmConfig-version.cmake;\\mac\Home\Desktop\CPSC427\template_v2\ext\glm\cmake\glm\glmConfig.cmake;\\mac\Home\Desktop\CPSC427\template_v2\ext\project_path.hpp.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">\\mac\Home\Desktop\CPSC427\template_v2\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule //mac/Home/Desktop/CPSC427/template_v2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\bin\cmake.exe -S//mac/Home/Desktop/CPSC427/template_v2 -B//mac/Home/Desktop/CPSC427/template_v2/build --check-stamp-file //mac/Home/Desktop/CPSC427/template_v2/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeCInformation.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeCXXInformation.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeGenericSystem.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeInitializeConfigs.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeRCInformation.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeSystemSpecificInformation.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\CMakeSystemSpecificInitialize.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\Compiler\MSVC-CXX.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\FindOpenGL.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\FindPackageHandleStandardArgs.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\FindPackageMessage.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\Platform\Windows-MSVC-CXX.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\Platform\Windows.cmake;\\Mac\Home\Desktop\cmake-3.21.3-windows-x86_64\cmake-3.21.3-windows-x86_64\share\cmake-3.21\Modules\Platform\WindowsPaths.cmake;\\mac\Home\Desktop\CPSC427\template_v2\build\CMakeFiles\3.21.3\CMakeCCompiler.cmake;\\mac\Home\Desktop\CPSC427\template_v2\build\CMakeFiles\3.21.3\CMakeCXXCompiler.cmake;\\mac\Home\Desktop\CPSC427\template_v2\build\CMakeFiles\3.21.3\CMakeRCCompiler.cmake;\\mac\Home\Desktop\CPSC427\template_v2\build\CMakeFiles\3.21.3\CMakeSystem.cmake;\\mac\Home\Desktop\CPSC427\template_v2\ext\glm\cmake\glm\glmConfig-version.cmake;\\mac\Home\Desktop\CPSC427\template_v2\ext\glm\cmake\glm\glmConfig.cmake;\\mac\Home\Desktop\CPSC427\template_v2\ext\project_path.hpp.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">\\mac\Home\Desktop\CPSC427\template_v2\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="\\mac\Home\Desktop\CPSC427\template_v2\build\ZERO_CHECK.vcxproj">
+      <Project>{13C8D1EC-A029-3877-993C-3860FE8F7E5C}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="\\mac\Home\Desktop\CPSC427\template_v2\build\salmon.vcxproj">
+      <Project>{01892D13-861C-36A0-967F-A273DCAE9A2F}</Project>
+      <Name>salmon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
